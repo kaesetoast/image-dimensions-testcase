@@ -1,0 +1,19 @@
+@mixin test-mixin() {
+	width: image-width('crop_alf.jpg');
+}
+
+@function test-function() {
+	@return image-width('crop_alf.jpg');
+}
+
+.test {
+	width: image-width('crop_alf.jpg');
+}
+
+.test-mixin {
+	@include test-mixin;
+}
+
+.test-function {
+	width: test-function();
+}
